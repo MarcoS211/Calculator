@@ -23,35 +23,42 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!-- Botones: Números -->
-        <Button Grid.Row="2" Grid.Column="0">7</Button>
-        <Button Grid.Row="2" Grid.Column="1">8</Button>
-        <Button Grid.Row="2" Grid.Column="2">9</Button>
-        <Button Grid.Row="3" Grid.Column="0">4</Button>
-        <Button Grid.Row="3" Grid.Column="1">5</Button>
-        <Button Grid.Row="3" Grid.Column="2">6</Button>
-        <Button Grid.Row="4" Grid.Column="0">1</Button>
-        <Button Grid.Row="4" Grid.Column="1">2</Button>
-        <Button Grid.Row="4" Grid.Column="2">3</Button>
-        <Button Grid.Row="5" Grid.Column="1">0</Button>
+        <!-- Números -->
+        <Button Grid.Row="2" Grid.Column="0" x:Name="boton7" Click="boton7_Click" >7</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="boton8" Click="boton8_Click">8</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="boton9" Click="boton9_Click">9</Button>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="boton4" Click="boton4_Click">4</Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="boton5" Click="boton5_Click">5</Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="boton6" Click="boton6_Click">6</Button>
+        <Button Grid.Row="4" Grid.Column="0" x:Name="boton1" Click="boton1_Click">1</Button>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="boton2" Click="boton2_Click">2</Button>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="boton3" Click="boton3_Click">3</Button>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="boton0" Click="boton0_Click">0</Button>
 
-        <!-- Botones: Operadores -->
-        <Button Grid.Row="1" Grid.Column="3">+</Button>
-        <Button Grid.Row="2" Grid.Column="3">-</Button>
-        <Button Grid.Row="3" Grid.Column="3">*</Button>
-        <Button Grid.Row="4" Grid.Column="3">*</Button>
-        <Button Grid.Row="5" Grid.Column="3">=</Button>
+        <!-- Operadores -->
+        <Button Grid.Row="1" Grid.Column="3" Background="#FFDCEFCA" x:Name="botonSumar" Click="botonSumar_Click">+</Button>
+        <Button Grid.Row="2" Grid.Column="3" Background="#FFDCEFCA" x:Name="botonRestar" Click="botonRestar_Click">-</Button>
+        <Button Grid.Row="3" Grid.Column="3" Background="#FFDCEFCA" x:Name="botonMultiplicar" Click="botonMultiplicar_Click">*</Button>
+        <Button Grid.Row="4" Grid.Column="3" Background="#FFDCEFCA" x:Name="botonDividir" Click="botonDividir_Click">/</Button>
+        <Button Grid.Row="5" Grid.Column="3" Background="#FFB6D8EA" x:Name="botonResultado" Click="botonResultado_Click">=</Button>
 
-        <!-- Botones: Limpiadores -->
-        <Button Grid.Row="1" Grid.Column="0">CE</Button>
-        <Button Grid.Row="1" Grid.Column="1">C</Button>
-        <Button Grid.Row="1" Grid.Column="2" Content="&lt;="></Button>
+        <!-- Limpiadores -->
+        <Button Grid.Row="1" Grid.Column="0" Background="#FFE6D1D1" x:Name="botonCE" Click="botonCE_Click">CE</Button>
+        <Button Grid.Row="1" Grid.Column="1" Background="#FFF18888" x:Name="botonC" Click="botonC_Click">C</Button>
+        <Button Grid.Row="1" Grid.Column="2" Content="&lt;=" Background="#FFB6D8EA" x:Name="botonRetroceder" Click="botonRetroceder_Click"></Button>
 
-        <!-- Boton: Positivo y Negativo -->
-        <Button Grid.Row="5" Grid.Column="0" Content="+-"></Button>
+        <!-- Positivo y Negativo -->
+        <Button Grid.Row="5" Grid.Column="0" Content="+-" x:Name="botonPositivoNegativo" Click="botonPositivoNegativo_Click"></Button>
+        
+        <!-- Memory -->
+        <Button Grid.Row="5" Grid.Column="2" Content="M" x:Name="botonMemory" Click="botonMemory_Click"></Button>
 
-        <!-- TextBox -->
-        <TextBox IsReadOnly="True" TextAlignment="Right" VerticalContentAlignment="Bottom" FontSize="40" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">0</TextBox>
+        <!-- Pantalla -->
+        <TextBox x:Name="txtResultado" IsReadOnly="True" TextAlignment="Right" VerticalContentAlignment="Bottom" FontSize="40" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" >0</TextBox>
+
+       
 
     </Grid>
+    
+    
 </Window>
